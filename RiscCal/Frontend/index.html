@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>RiskScanner</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="app-container">
+        <header class="hero-section">
+            <h1>Risk<span>Scanner</span></h1>
+            <p>Advanced Technical Sentiment Engine</p>
+            <div class="search-container">
+                <input type="text" id="tickerInput" placeholder="Symbol (e.g. VEDL, TATAMOTORS)...">
+                <button onclick="analyzeStock()" id="analyzeBtn">Run Scan</button>
+            </div>
+        </header>
+
+        <main id="resultArea" class="hidden">
+            <div class="dashboard">
+                <div class="card" id="riskCard">
+                    <h3>Risk Intelligence</h3>
+                    <div id="conclusion" class="status-badge">--</div>
+                    <div class="score-number" id="riskScore">0</div>
+                    <ul id="reasons"></ul>
+                </div>
+                <div class="card stats-card">
+                    <div class="stat-item"><label>Current Value</label><span id="priceDisplay">--</span></div>
+                    <div class="stat-item"><label>52-Week Peak</label><span id="high52Display">--</span></div>
+                    <div class="stat-item"><label>Drawdown</label><span id="dropDisplay">--</span></div>
+                </div>
+                <div class="card chart-card">
+                    <canvas id="priceChart"></canvas>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
