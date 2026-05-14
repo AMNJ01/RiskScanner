@@ -10,7 +10,7 @@ services:
         value: 3.10.0
 
   # The Static Frontend Service
-  - type: static_site
+  - type: static
     name: riskscanner-frontend
     runtime: static
     buildCommand: "" 
